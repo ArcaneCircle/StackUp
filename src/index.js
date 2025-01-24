@@ -51,32 +51,30 @@ window.highscores
     },
   })
   .then(() => {
-    window.onload = () => {
-      document
-        .getElementById("container")
-        .append(
-          h("div", { id: "game" }),
-          h("div", { id: "score" }, 0),
-          h(
-            "div",
-            { id: "instructions" },
-            "Click (or press the spacebar) to place the block",
-          ),
-          h(
-            "div",
-            { class: "game-over" },
-            h("h2", {}, "Game Over"),
-            h("p", {}, "You did great, you're the best."),
-            h("p", {}, "Click or spacebar to start again"),
-          ),
-          h(
-            "div",
-            { class: "game-ready" },
-            h("div", { id: "start-btn" }, "Start"),
-            h("div"),
-          ),
-        );
+    document
+      .getElementById("container")
+      .append(
+        h("div", { id: "game" }),
+        h("div", { id: "score" }, 0),
+        h(
+          "div",
+          { id: "instructions" },
+          "Click (or press the spacebar) to place the block",
+        ),
+        h(
+          "div",
+          { class: "game-over" },
+          h("h2", {}, "Game Over"),
+          h("p", {}, "You did great, you're the best."),
+          h("p", {}, "Click or spacebar to start again"),
+        ),
+        h(
+          "div",
+          { class: "game-ready" },
+          h("div", { id: "start-btn" }, "Start"),
+          h("div"),
+        ),
+      );
 
-      game = new Game();
-    };
+    game = new Game();
   });
